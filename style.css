@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap');
+*::before*::after{
+    box-sizing: border-box;
+
+
+}
+:root{  
+--Red: hsl(0, 100%, 74%);
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%);
+--Grayish-Blue: hsl(246, 25%, 77%);
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-size: cover;
+    background-color:var(--Red);
+    height: 100vh;
+    width: 100%;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.content{
+color: #fff;
+text-align: center;
+}
+.content p{
+    font-size: 12px;
+    line-height: 1.3rem;
+}
+/*price box*/
+.price-box{
+    background:var(--Blue);
+    color: #fff;
+    width: 80%;
+    padding: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 1px 5px 4px 1px rgba(111, 111, 111, 0.4);
+
+}
+
+span{
+    font-weight: 700;
+}
+/*form*/
+.form-box{
+    background:#fff;
+    margin-top: 50px;
+text-align:center;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+}
+input{
+    margin-top: 25px;
+    padding: 15px;
+    overflow: hidden;
+    border: 1px solid var(--Grayish-Blue);
+    font-weight: 600;
+}
+
+#btn{
+    background:var(--Green);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-top: 15px;
+    border:1px solid var(--Green);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 1px 4px 4px 1px rgba(111, 111, 111, 0.4);
+
+}
+.form-box p{
+    font-size: 9px;
+    color: var(--Grayish-Blue);
+}
+.terms{
+    color: var(--Red);
+    cursor: pointer;
+}
+/*form validation*/
+#fname-error{
+    overflow: hidden;
+    text-align: right;
+    display: none;  
+
+}
+#lname-error{
+    overflow: hidden;
+    text-align: right;
+    display: none;  
+
+}
+#email-error{
+    overflow: hidden;
+    text-align: right;
+    display: none;  
+
+}
+#pass-error{
+    overflow: hidden;
+    text-align: right;
+    display: none;  
+
+}
+/* how to envoke error on input ?
+.error{
+    border:2px solid var(--Red);
+    padding: 20px;
+}*/
+#fname-error p,#lname-error p,#email-error p,#pass-error p{
+    color: var(--Red);
+    font-weight: 700;
+}
+#fname-error img{
+    position: absolute;
+    left:85%;
+    top:10%;
+   
+}
+#lname-error img{
+    position: absolute;
+    left:85%;
+    top:30%;
+}
+#email-error img{
+    position: absolute;
+    left:85%;
+    top:45%;
+}
+#pass-error img{
+    position: absolute;
+    left:85%;
+    top:65%;
+}
+
+/*Media queries*/
+@media(min-width: 1440px){
+    .container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .content{
+        text-align: left;
+        margin-top: 250px;
+        margin-left: 108px;
+        width: 40%;
+    }
+    .content h1{
+        font-size: 3rem;
+        line-height: 2.8rem;
+    }
+    .content p{
+        font-size: 1rem;
+        max-width: 500px;
+        line-height: 1.8re;
+    }
+    .price-box{
+        margin-top:-40px;
+        margin-right: 180px;
+        width: 36%;
+        font-size: 18px;
+        height: 50px;
+
+
+    }
+    .form-box{
+        width: 35%;
+    position: absolute;
+    top:35%;
+    left:50%;
+  
+    }
+    input{
+        width: 80%;
+        overflow: hidden;
+    }
+    #btn{
+        width: 80%;
+    }
+    .form-box p{
+font-size: 10px;  
+  }
+    
+}
