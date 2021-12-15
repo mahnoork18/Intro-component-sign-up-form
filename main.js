@@ -23,7 +23,7 @@ if (last_name == "") {
   }, 3000);
   document.getElementById("lname-error").style.display = "block";
 } 
-if(email_add == "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/"){
+if(email_add.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/){
   setTimeout(() => {
     document.getElementById("email-error").style.display = "none";
   }, 3000);
